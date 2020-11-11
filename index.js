@@ -87,16 +87,11 @@ function getWinnersByYear(data, getYearsCB, getWinnersCB) {
 Write a function called `getAverageGoals` that accepts a parameter `data` and returns the the average number of home team goals and away team goals scored per match (Hint: use .reduce and do this in 2 steps) */
 
 function getAverageGoals(data) {
-
-
-
-
+    const num = fifaData.reduce(function(acc, data) {
+        return ((acc + data['Home Team Goals'] + data['Away Team Goals']) / fifaData.length);
+    }, 0)
+    return (num);
 }
-
-
-
-
-
 
 /// 🥅 STRETCH 🥅 ///
 
@@ -106,9 +101,7 @@ Create a function called `getCountryWins` that takes the parameters `data` and `
 Hint: Investigate your data to find "team initials"!
 Hint: use `.reduce` */
 
-function getCountryWins( /* code here */ ) {
-
-    /* code here */
+function getCountryWins(data, teamInitials) {
 
 }
 
